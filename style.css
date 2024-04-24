@@ -602,7 +602,7 @@ section {
 }
 
 .about .image {
-  background: url("../img/me.jpg") center center no-repeat;
+  background: url("C:\Users\user\Downloads\about perfume.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -643,6 +643,11 @@ section {
   transition: 0.9s;
   background-color: #ffb727;
 }
+
+.about {
+  background-color:  #deb887 ;
+}
+
 
 /*--------------------------------------------------------------
 # My Resume
