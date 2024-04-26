@@ -101,6 +101,8 @@
         <a href="#" onclick="showContent('services')">Services</a>
         <a href="#" onclick="showContent('portfolio')">Portfolio</a>
         <a href="#" onclick="showContent('contact')">Contact</a>
+          <a href="#" onclick="showContent('testimonials')">Offers</a>
+        
     </nav>
 
     <!-- ======= Home Section ======= -->
@@ -273,6 +275,46 @@
 
       </div>
     </section><!-- End My Portfolio Section -->
+
+ <section id="testimonials" class="testimonials">
+  <div class="container position-relative">
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <!-- Testimonial content -->
+          </div>
+        </div>
+        <!-- Add more swiper-slide elements for additional testimonials -->
+      </div>
+    </div>
+  </div>
+   </section>
+
+<!-- Include necessary JavaScript libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+<script>
+  // Initialize Swiper
+  var swiper = new Swiper('.testimonials-slider', {
+    // Add Swiper settings as needed
+  });
+
+  // Array of background image URLs
+  var bgImages = [
+    'url(C:\Users\user\Downloads\perfume offers\1 makeup+perfume.png)',
+    'url(C:\Users\user\Downloads\perfume offers\buy2 the third is free.png)',
+    'url(C:\Users\user\Downloads\perfume offers\for men- with each purchase watch.png)'
+    // Add more background image URLs as needed
+  ];
+
+  // Listen for slide change event
+  swiper.on('slideChange', function () {
+    // Get the active slide index
+    var activeIndex = swiper.activeIndex;
+    
+    // Update the background image of the testimonials section
+    document.getElementById('testimonials').style.backgroundImage = bgImages[activeIndex];
+  });
     
 <!--contact-->
     <div id="contact">
