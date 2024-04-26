@@ -217,119 +217,104 @@
     </section>
 
       <!-- =======  Perfumes Section ======= -->
-        <section id="portfolio" class="portfolio">
-      <div class="container">
+      <title>Perfume Section</title>
+    <style>
+        /* Add your custom styles here */
+        /* This is just an example */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+        .portfolio-img img {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-info {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<section id="portfolio" class="portfolio">
+    <div class="container">
 
         <div class="section-title">
-          <h2>Perfume Section</h2>
-          <p>Here you can choose from our selection of high brand fragrances </p>
+            <h2>Perfume Section</h2>
+            <p>Here you can choose from our selection of high brand fragrances</p>
         </div>
 
-     <ul id="portfolio-flters" class="d-flex justify-content-center" style="list-style-type: none;">
-  <li style="margin-right: 10px;"><a href="#portfolio" data-filter="*" class="filter-active">All</a></li>
-  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-app">Men</a></li>
-  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-card">Women</a></li>
-  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-web">Gift Sets</a></li>
-</ul>
-
-
+        <div id="portfolio-filters" class="d-flex justify-content-center" style="margin-bottom: 20px;">
+            <button onclick="filter('all')">All</button>
+            <button onclick="filter('men')">Men</button>
+            <button onclick="filter('women')">Women</button>
+            <button onclick="filter('gift_sets')">Gift Sets</button>
+        </div>
 
         <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Sharqi.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Sharqi perfume gift set </h4>
-              <p>659 Sar</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\my way perfume.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>My Way perfume
-              </h4>
-              <p> 300 Sar</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\gift sets\wgift2.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Ajmal perfume gift set</h4>
-              <p>860 Sar</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\wperfume 2.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Sapphire (Fierce) perfume </h4>
-              <p>280 Sar</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\wperfume 1.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Arabella Perfume</h4>
-              <p>370 Sar</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="C:\Users\user\Downloads\gift sets\perfumegiftset1.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Penhaligon's perfume gift set  </h4>
-              <p>750 Sar</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
+            <!-- Portfolio items will be dynamically added here -->
         </div>
 
-      </div>
+    </div>
+</section>
+
+<script>
+    // Data for portfolio items
+   const perfumes = [
+    { name: "App 1", category: "men", price: "300 Sar", image: "assets/img/portfolio/portfolio-1.jpg" },
+    { name: "Sharqi perfume gift set", category: "gift_sets", price: "659 Sar", image: "C:\\Users\\user\\Downloads\\Sharqi.png" },
+    { name: "My Way perfume", category: "women", price: "300 Sar", image: "C:/Users/user/Downloads/Woman perfumes/my way perfume.png" },
+    { name: "Ajmal perfume gift set", category: "gift_sets", price: "860 Sar", image: "C:/Users/user/Downloads/gift sets/wgift2.png" },
+    { name: "Sapphire (Fierce) perfume", category: "women", price: "280 Sar", image: "C:/Users/user/Downloads/Woman perfumes/wperfume 2.png" },
+    { name: "Penhaligon's perfume gift set", category: "gift_sets", price: "750 Sar", image: "C:/Users/user/Downloads/gift sets/perfumegiftset1.png" },
+    { name: "Arabella Perfume", category: "women", price: "370 Sar", image: "C:/Users/user/Downloads/Woman perfumes/wperfume 1.png" }
+];
+
+    // Function to generate portfolio items
+    function generatePortfolioItems(items) {
+        const portfolioItemsContainer = document.querySelector(".portfolio-container");
+        portfolioItemsContainer.innerHTML = '';
+
+        items.forEach(perfume => {
+            const portfolioItem = document.createElement("div");
+            portfolioItem.classList.add("col-lg-4", "col-md-6", "portfolio-item");
+            portfolioItem.innerHTML = `
+                <div class="portfolio-img"><img src="${perfume.image}" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                    <h4>${perfume.name}</h4>
+                    <p>${perfume.price}</p>
+                </div>`;
+            portfolioItemsContainer.appendChild(portfolioItem);
+        });
+    }
+
+    // Function to filter portfolio items
+    function filter(category) {
+        const filteredItems = category === 'all' ? perfumes : perfumes.filter(item => item.category === category);
+        generatePortfolioItems(filteredItems);
+    }
+
+    // Initial setup
+    generatePortfolioItems(perfumes);
+</script>
+
     </section><!-- End My Portfolio Section -->
 
 
