@@ -92,7 +92,61 @@
             padding: 20px;
             display: none;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 10px;
+            text-align: left;
+        }
+        .form-container {
+            margin-left: 50px;
+            max-width: 600px;
+            margin-right: auto;
+            width: 97%;
+            height: 450px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .wide-input {
+            width: 100%;
+        }
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        #thankYouMessage {
+            display: none;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
     </style>
+    <script>
+        function submitForm() {
+            // Check if required fields are filled
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (name.trim() === '' || email.trim() === '' || subject.trim() === '' || message.trim() === '') {
+                alert('Please fill out all required fields.');
+                return; // Stop form submission if any required field is empty
+            }
+
+            // Show thank you message and hide the form
+            document.getElementById('thankYouMessage').style.display = 'block';
+            document.getElementById('contactForm').reset(); // Reset form fields
+            document.getElementById('contactForm').style.display = 'none';
+			document.getElementById('contactHeading').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -139,7 +193,8 @@
     </section>
     <!-- End About Us Section -->
   <!-- ======= Services Section ======= -->
-    <div id="services">
+    <section id="services" class="services">
+    <div class="services">
       
       <div class="container">
         <div class="section-title">
@@ -159,6 +214,7 @@
       </div>
     
     </div>
+    </section>
 
       <!-- =======  Perfumes Section ======= -->
         <section id="portfolio" class="portfolio">
@@ -279,10 +335,49 @@
 
 
 <!--contact-->
-    <div id="contact">
-        <h2>Contact</h2>
-        <p>Contact us for inquiries.</p>
+    <section id="contact" class="contact">
+    
+       <body>
+<br>
+<h1 id="contactHeading" style="margin-left: 44%;">Contact us</h1>
+    <div class="page-container">
+        
+        <form id="contactForm" action="submit.php" method="post" class="contact-form">
+            <div class="form-container">
+                <table>
+                    <tr>
+                        <td><input type="text" id="name" name="name" class="wide-input" placeholder="Your Name" required></td>
+                        <td><input type="email" id="email" name="email" class="wide-input" placeholder="Your Email" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" id="subject" name="subject" class="wide-input" placeholder="Subject" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea id="message" name="message" class="wide-input" rows="6" placeholder="Message" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="tel" id="phone" name="phone" class="wide-input" placeholder="Phone Number (Optional)"></td>
+                        <td>
+                            <select id="contactMethod" name="contactMethod" required class="wide-input">
+                                <option value="" disabled selected>Select Preferred Contact Method</option>
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" onclick="submitForm(event)">Send Message</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <p id="thankYouMessage">Thank you for contacting us!</p>
     </div>
+</body>
+        
+    </section>
 
     <script>
         function showContent(id) {
