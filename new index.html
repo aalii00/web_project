@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Palace Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add your custom styles here */
+        /* This is just an example */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+        .logo img {
+            width: 150px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .section-title h2 {
+            color: #343a40;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        #home {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+        #about {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+        #services {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+        #portfolio {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+        #contact {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showContent('home')">Home</a>
+        <a href="#" onclick="showContent('about')">About Us</a>
+        <a href="#" onclick="showContent('services')">Services</a>
+        <a href="#" onclick="showContent('portfolio')">Portfolio</a>
+        <a href="#" onclick="showContent('contact')">Contact</a>
+    </nav>
+
+    <!-- ======= Home Section ======= -->
+    <section id="home">
+        <div class="home-container d-flex align-items-center">
+            <div class="col-md-6">
+                <div style="position: relative;">
+                    <img src="perfume.bg.jpg" alt="Description of the image" style="width: 100%; height: auto;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff;">
+                        <h1>Welcome to Perfume Palace</h1>
+                        <h2>We hope you enjoy our website</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Home -->
+
+    <!-- ======= About Me Section ======= -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="perfume.bg.jpg" alt="Description of the image">
+                </div>
+                <div class="col-md-6 content">
+                    <p>In Perfume Palace, we sell perfumes from several cities in Saudi such as Riyadh and Alkhobar.</p>
+                    <p>In June 1982, we started our journey in Riyadh where we discovered different aromas from several flowers. Later, we started traveling around Saudi and discovering different delightful aromas which inspired us to start this journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Section -->
+  <!-- ======= Services Section ======= -->
+    <div id="services">
+      
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Discover our range of perfumes and delivery options</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Perfume Sales</h3>
+            <p>Browse through our collection of high-quality perfumes sourced from various cities in Saudi Arabia such as Riyadh and Alkhobar, and to all of the kingdom's cities.</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Delivery Options</h3>
+            <p>We offer delivery services to your location for your convenience. Alternatively, you can choose to pick up your purchase from our store.</p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+      <!-- =======  Perfumes Section ======= -->
+        <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Perfume Section</h2>
+          <p>Here you can choose from our selection of high brand fragrances </p>
+        </div>
+
+     <ul id="portfolio-flters" class="d-flex justify-content-center" style="list-style-type: none;">
+  <li style="margin-right: 10px;"><a href="#portfolio" data-filter="*" class="filter-active">All</a></li>
+  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-app">Men</a></li>
+  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-card">Women</a></li>
+  <li style="margin-right: 10px;"><a href="#portfolio" data-filter=".filter-web">Gift Sets</a></li>
+</ul>
+
+
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Sharqi.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Sharqi perfume gift set </h4>
+              <p>659 Sar</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\my way perfume.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>My Way perfume
+              </h4>
+              <p> 300 Sar</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\gift sets\wgift2.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ajmal perfume gift set</h4>
+              <p>860 Sar</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\wperfume 2.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Sapphire (Fierce) perfume </h4>
+              <p>280 Sar</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\Woman perfumes\wperfume 1.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Arabella Perfume</h4>
+              <p>370 Sar</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="C:\Users\user\Downloads\gift sets\perfumegiftset1.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Penhaligon's perfume gift set  </h4>
+              <p>750 Sar</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End My Portfolio Section -->
+    
+<!--contact-->
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Contact us for inquiries.</p>
+    </div>
+
+    <script>
+        function showContent(id) {
+            var sections = document.getElementsByTagName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+        }
+        // Call showContent with 'home' initially to display the Home section on page load
+        showContent('home');
+    </script>
+</body>
+</html>
