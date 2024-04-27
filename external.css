@@ -1,12 +1,37 @@
 /* styles.css */
 
 /* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+        .portfolio-img img {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-info {
+            text-align: center;
+        }
 
 header {
     background-color: #343a40;
