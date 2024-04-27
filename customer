@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 10px;
+            text-align: left;
+        }
+        .form-container {
+            margin-left: 50px;
+            max-width: 600px;
+            width: 97%;
+            height: 600px; 
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end; 
+        }
+        .wide-input {
+            width: 100%;
+        }
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        #thankYouMessage {
+            display: none;
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-top: 10px; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#submitBtn').click(function() {
+                var form = $('#customer');
+                var thankYouMessage = $('#thankYouMessage');
+
+                // Check if required fields are filled
+                var isValid = true;
+                form.find('input[required], select[required]').each(function() {
+                    if ($(this).val().trim() === '') {
+                        alert('Please fill out all required fields and agree to the terms and conditions.');
+                        isValid = false;
+                        return false; // Exit the loop
+                    }
+                });
+
+                if (!isValid) {
+                    return; // Stop form submission if any required field is empty
+                }
+
+                var password = $('#password').val();
+                var confirmPassword = $('#confirmPassword').val();
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match. Please try again.');
+                    return; // Stop form submission if passwords do not match
+                }
+
+                // Fade out the form and display the thank you message
+                form.fadeOut(500, function() {
+                    thankYouMessage.fadeIn(500);
+                });
+
+                // Reset form fields
+                form[0].reset();
+            });
+        });
+    </script>
+</head>
+<body>
+<br>
+<h1 style="margin-left: 37%;">Customer Registration</h1><br><br>
+<div class="page-container">
+    <form id="customer" action="submit.php" method="post" class="customer-form">
+        <div class="form-container">
+            <table>
+                <tr>
+                    <td><input type="text" id="name2" name="name2" class="wide-input" placeholder="Your Name" required></td>
+                    <td><input type="email" id="email2" name="email2" class="wide-input" placeholder="Your Email" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" id="address" name="address" class="wide-input" placeholder="Address" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="color:gray;" type="date" id="dob" name="dob" class="wide-input" placeholder="Date of Birth" required></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="phone" name="phone" class="wide-input" placeholder="Phone Number (Optional)"></td>
+                    <td>
+                        <select style="color:gray;" id="gender" name="gender" required class="wide-input">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Prefer not to say</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" name="password" class="wide-input" placeholder="Password" required></td>
+                    <td><input type="password" id="confirmPassword" name="confirmPassword" class="wide-input" placeholder="Confirm Password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="termsCheckbox">
+                            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required>
+                            I agree to the following terms and conditions:
+                            <ul>
+                                <li>I certify that the information provided is accurate.</li>
+                                <li>I agree to comply with the privacy policy.</li>
+                            </ul>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="button" id="submitBtn">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <p id="thankYouMessage">Thank you for registering!</p>
+</div>
+</body>
+</html>
