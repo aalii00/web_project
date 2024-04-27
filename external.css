@@ -132,32 +132,32 @@ nav a:hover {
 
 /* external.css */
 
-/* Ensure proper spacing and alignment */
+
 .contact {
-    padding: 20px; /* Add padding to create space around the content */
+    padding: 20px; 
 }
 
 #contactHeading {
-    margin-left: 44%; /* Adjust margin-left for better positioning */
+    margin-left: 44%; 
 }
 
 .page-container {
-    margin: 0 auto; /* Center the content horizontally */
-    max-width: 600px; /* Limit the maximum width of the container */
+    margin: 0 auto; 
+    max-width: 600px; 
 }
 
 .contact-form {
-    border: 1px solid #ccc; /* Add border to the form for better separation */
-    padding: 20px; /* Add padding to the form container */
+    border: 1px solid #ccc; 
+    padding: 20px; 
 }
 
 .contact-form table {
-    width: 100%; /* Ensure the table fills the container */
+    width: 100%; 
 }
 
 .wide-input {
-    width: 100%; /* Make inputs and textarea span the full width */
-    margin-bottom: 10px; /* Add space between input elements */
+    width: 100%; 
+    margin-bottom: 10px; 
 }
 
 button[type="submit"] {
